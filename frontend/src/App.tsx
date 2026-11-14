@@ -20,8 +20,9 @@ import DatavizView from './views/dataviz'
 import SentimentView from './views/sentiment'
 import LifecycleView from './views/lifecycle'
 import OpsalertView from './views/opsalert'
+import SentimentLinkView from './features/sentiment-link'
 
-const navItems = [{ label: "运营概览", path: "/" }, { label: "渠道管理", path: "/channel" }, { label: "投放活动", path: "/campaign" }, { label: "触点追踪", path: "/touchpoint" }, { label: "归因分析", path: "/attribution" }, { label: "ROI评估", path: "/roi" }, { label: "转化漏斗", path: "/conversion" }, { label: "用户路径", path: "/userpath" }, { label: "留存分析", path: "/retention" }, { label: "事件定义", path: "/eventdef" }, { label: "用户画像", path: "/profile" }, { label: "热力分析", path: "/heatmap" }, { label: "竞品对标", path: "/benchmark" }, { label: "数据审计", path: "/auditcheck" }, { label: "分流配置", path: "/abgroup" }, { label: "可视化配置", path: "/dataviz" }, { label: "舆情分析", path: "/sentiment" }, { label: "生命周期", path: "/lifecycle" }, { label: "运营预警", path: "/opsalert" }]
+const navItems = [{ label: "运营概览", path: "/" }, { label: "渠道管理", path: "/channel" }, { label: "投放活动", path: "/campaign" }, { label: "触点追踪", path: "/touchpoint" }, { label: "归因分析", path: "/attribution" }, { label: "ROI评估", path: "/roi" }, { label: "转化漏斗", path: "/conversion" }, { label: "用户路径", path: "/userpath" }, { label: "留存分析", path: "/retention" }, { label: "事件定义", path: "/eventdef" }, { label: "用户画像", path: "/profile" }, { label: "热力分析", path: "/heatmap" }, { label: "竞品对标", path: "/benchmark" }, { label: "数据审计", path: "/auditcheck" }, { label: "分流配置", path: "/abgroup" }, { label: "可视化配置", path: "/dataviz" }, { label: "舆情分析", path: "/sentiment" }, { label: "舆情联动热度归并", path: "/sentiment-link" }, { label: "生命周期", path: "/lifecycle" }, { label: "运营预警", path: "/opsalert" }]
 
 export default function App() {
   const [operator] = useState('值班管理员')
@@ -61,6 +62,7 @@ export default function App() {
           <Route path="/abgroup" element={<AbgroupView />} />
           <Route path="/dataviz" element={<DatavizView />} />
           <Route path="/sentiment" element={<SentimentView />} />
+          <Route path="/sentiment-link" element={<SentimentLinkView />} />
           <Route path="/lifecycle" element={<LifecycleView />} />
           <Route path="/opsalert" element={<OpsalertView />} />
         </Routes>
